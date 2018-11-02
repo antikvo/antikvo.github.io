@@ -6,21 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="//antikvo.online">
-  <title>Antikvo的博客</title>
+  <title>Activity 的四种启动模式 | Antikvo的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Activity 的四种启动模式1.1 standard 标准模式 (可多实例)这是系统默认的模式，在这种模式下启动的Activity可以多次实例化并置于栈顶 1.2 singleTop 栈顶复用模式 (有条件的多实例)如果目标任务栈的顶部已存在一个 Activity 实例，则系统会通过调用该实例的 onNewIntent() 方法向其传送 Intent，而不是创建新的 Activity 实例。">
+  <meta name="description" content="1.1 standard 标准模式 (可多实例)这是系统默认的模式，在这种模式下启动的Activity可以多次实例化并置于栈顶 1.2 singleTop 栈顶复用模式 (有条件的多实例)如果目标任务栈的顶部已存在一个 Activity 实例，则系统会通过调用该实例的 onNewIntent() 方法向其传送 Intent，而不是创建新的 Activity 实例。  “standard”和”sin">
 <meta name="keywords" content="随笔">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Antikvo的博客">
+<meta property="og:title" content="Activity 的四种启动模式">
 <meta property="og:url" content="//antikvo.online/2018/11/01/Activity的四种启动模式/index.html">
 <meta property="og:site_name" content="Antikvo的博客">
-<meta property="og:description" content="Activity 的四种启动模式1.1 standard 标准模式 (可多实例)这是系统默认的模式，在这种模式下启动的Activity可以多次实例化并置于栈顶 1.2 singleTop 栈顶复用模式 (有条件的多实例)如果目标任务栈的顶部已存在一个 Activity 实例，则系统会通过调用该实例的 onNewIntent() 方法向其传送 Intent，而不是创建新的 Activity 实例。">
+<meta property="og:description" content="1.1 standard 标准模式 (可多实例)这是系统默认的模式，在这种模式下启动的Activity可以多次实例化并置于栈顶 1.2 singleTop 栈顶复用模式 (有条件的多实例)如果目标任务栈的顶部已存在一个 Activity 实例，则系统会通过调用该实例的 onNewIntent() 方法向其传送 Intent，而不是创建新的 Activity 实例。  “standard”和”sin">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://github.com/antikvo/antikvo.github.io/blob/6cc89369cd5d9f8559d9d3baba958d80de72308a/images/android-lanuch-mode.png?raw=true">
-<meta property="og:updated_time" content="2018-11-02T01:49:20.000Z">
+<meta property="og:updated_time" content="2018-11-02T02:39:31.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Antikvo的博客">
-<meta name="twitter:description" content="Activity 的四种启动模式1.1 standard 标准模式 (可多实例)这是系统默认的模式，在这种模式下启动的Activity可以多次实例化并置于栈顶 1.2 singleTop 栈顶复用模式 (有条件的多实例)如果目标任务栈的顶部已存在一个 Activity 实例，则系统会通过调用该实例的 onNewIntent() 方法向其传送 Intent，而不是创建新的 Activity 实例。">
+<meta name="twitter:title" content="Activity 的四种启动模式">
+<meta name="twitter:description" content="1.1 standard 标准模式 (可多实例)这是系统默认的模式，在这种模式下启动的Activity可以多次实例化并置于栈顶 1.2 singleTop 栈顶复用模式 (有条件的多实例)如果目标任务栈的顶部已存在一个 Activity 实例，则系统会通过调用该实例的 onNewIntent() 方法向其传送 Intent，而不是创建新的 Activity 实例。  “standard”和”sin">
 <meta name="twitter:image" content="https://github.com/antikvo/antikvo.github.io/blob/6cc89369cd5d9f8559d9d3baba958d80de72308a/images/android-lanuch-mode.png?raw=true">
   
     <link rel="alternative" href="/atom.xml" title="Antikvo的博客" type="application/atom+xml">
@@ -164,9 +164,24 @@
             <article id="post-Activity的四种启动模式" class="article article-type-post " itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Activity 的四种启动模式
+    </h1>
+  
+
+        
+        <a href="/2018/11/01/Activity的四种启动模式/" class="archive-article-date">
+  	<time datetime="2018-11-01T14:19:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-01</time>
+</a>
+        
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Activity-的四种启动模式"><a href="#Activity-的四种启动模式" class="headerlink" title="Activity 的四种启动模式"></a>Activity 的四种启动模式</h1><h2 id="1-1-standard-标准模式-可多实例"><a href="#1-1-standard-标准模式-可多实例" class="headerlink" title="1.1 standard 标准模式 (可多实例)"></a>1.1 standard 标准模式 (可多实例)</h2><pre><code>这是系统默认的模式，在这种模式下启动的Activity可以多次实例化并置于栈顶
+        <h2 id="1-1-standard-标准模式-可多实例"><a href="#1-1-standard-标准模式-可多实例" class="headerlink" title="1.1 standard 标准模式 (可多实例)"></a>1.1 standard 标准模式 (可多实例)</h2><pre><code>这是系统默认的模式，在这种模式下启动的Activity可以多次实例化并置于栈顶
 </code></pre><h2 id="1-2-singleTop-栈顶复用模式-有条件的多实例"><a href="#1-2-singleTop-栈顶复用模式-有条件的多实例" class="headerlink" title="1.2 singleTop 栈顶复用模式 (有条件的多实例)"></a>1.2 singleTop 栈顶复用模式 (有条件的多实例)</h2><pre><code>如果目标任务栈的顶部已存在一个 Activity 实例，则系统会通过调用该实例的 onNewIntent() 方法向其传送 Intent，而不是创建新的 Activity 实例。
 </code></pre><blockquote>
 <p>“standard”和”singleTop”模式只在一个方面有差异： 每次”standard”Activity 有新的 Intent 时，系统都会创建新的类实例来响应该 Intent。每个实例处理单个 Intent。同理，也可创建新的”singleTop”Activity 实例来处理新的 Intent。 不过，如果目标任务在其堆栈顶部已有一个 Activity 实例，那么该实例将接收新 Intent（通过调用 onNewIntent()）；此时不会创建新实例。在其他情况下 — 例如，如果”singleTop”的一个现有实例虽在目标任务内，但未处于堆栈顶部，或者虽然位于堆栈顶部，但不在目标任务中 — 则系统会创建一个新实例并将其推送到堆栈上。</p>
@@ -300,7 +315,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Activity-的四种启动模式"><span class="toc-number">1.</span> <span class="toc-text">Activity 的四种启动模式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-standard-标准模式-可多实例"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 standard 标准模式 (可多实例)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-singleTop-栈顶复用模式-有条件的多实例"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 singleTop 栈顶复用模式 (有条件的多实例)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-singleTask-栈内复用模式-（单实例）"><span class="toc-number">1.3.</span> <span class="toc-text">1.3 singleTask 栈内复用模式 （单实例）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4-singleInstance-单例模式-（单实例）"><span class="toc-number">1.4.</span> <span class="toc-text">1.4 singleInstance 单例模式 （单实例）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-四种启动模式的区别"><span class="toc-number">1.5.</span> <span class="toc-text">2.四种启动模式的区别</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-standard-标准模式-可多实例"><span class="toc-number">1.</span> <span class="toc-text">1.1 standard 标准模式 (可多实例)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-singleTop-栈顶复用模式-有条件的多实例"><span class="toc-number">2.</span> <span class="toc-text">1.2 singleTop 栈顶复用模式 (有条件的多实例)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-singleTask-栈内复用模式-（单实例）"><span class="toc-number">3.</span> <span class="toc-text">1.3 singleTask 栈内复用模式 （单实例）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4-singleInstance-单例模式-（单实例）"><span class="toc-number">4.</span> <span class="toc-text">1.4 singleInstance 单例模式 （单实例）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-四种启动模式的区别"><span class="toc-number">5.</span> <span class="toc-text">2.四种启动模式的区别</span></a></li></ol>
                     </div>
                 </span>
             </div>

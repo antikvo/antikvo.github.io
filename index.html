@@ -163,9 +163,24 @@
     <article id="post-Activity的四种启动模式" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/11/01/Activity的四种启动模式/">Activity 的四种启动模式</a>
+    </h1>
+  
+
+        
+        <a href="/2018/11/01/Activity的四种启动模式/" class="archive-article-date">
+  	<time datetime="2018-11-01T14:19:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-01</time>
+</a>
+        
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Activity-的四种启动模式"><a href="#Activity-的四种启动模式" class="headerlink" title="Activity 的四种启动模式"></a>Activity 的四种启动模式</h1><h2 id="1-1-standard-标准模式-可多实例"><a href="#1-1-standard-标准模式-可多实例" class="headerlink" title="1.1 standard 标准模式 (可多实例)"></a>1.1 standard 标准模式 (可多实例)</h2><pre><code>这是系统默认的模式，在这种模式下启动的Activity可以多次实例化并置于栈顶
+        <h2 id="1-1-standard-标准模式-可多实例"><a href="#1-1-standard-标准模式-可多实例" class="headerlink" title="1.1 standard 标准模式 (可多实例)"></a>1.1 standard 标准模式 (可多实例)</h2><pre><code>这是系统默认的模式，在这种模式下启动的Activity可以多次实例化并置于栈顶
 </code></pre><h2 id="1-2-singleTop-栈顶复用模式-有条件的多实例"><a href="#1-2-singleTop-栈顶复用模式-有条件的多实例" class="headerlink" title="1.2 singleTop 栈顶复用模式 (有条件的多实例)"></a>1.2 singleTop 栈顶复用模式 (有条件的多实例)</h2><pre><code>如果目标任务栈的顶部已存在一个 Activity 实例，则系统会通过调用该实例的 onNewIntent() 方法向其传送 Intent，而不是创建新的 Activity 实例。
 </code></pre><blockquote>
 <p>“standard”和”singleTop”模式只在一个方面有差异： 每次”standard”Activity 有新的 Intent 时，系统都会创建新的类实例来响应该 Intent。每个实例处理单个 Intent。同理，也可创建新的”singleTop”Activity 实例来处理新的 Intent。 不过，如果目标任务在其堆栈顶部已有一个 Activity 实例，那么该实例将接收新 Intent（通过调用 onNewIntent()）；此时不会创建新实例。在其他情况下 — 例如，如果”singleTop”的一个现有实例虽在目标任务内，但未处于堆栈顶部，或者虽然位于堆栈顶部，但不在目标任务中 — 则系统会创建一个新实例并将其推送到堆栈上。</p>
