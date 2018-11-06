@@ -275,14 +275,19 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="1-View里VISIBLE-INVISIBLE-GONE的区别？"><a href="#1-View里VISIBLE-INVISIBLE-GONE的区别？" class="headerlink" title="1.View里VISIBLE,INVISIBLE,GONE的区别？"></a>1.View里VISIBLE,INVISIBLE,GONE的区别？</h2><pre><code>VISIBLE: 可见
+        <h2 id="1-View里VISIBLE-INVISIBLE-GONE的区别？"><a href="#1-View里VISIBLE-INVISIBLE-GONE的区别？" class="headerlink" title="1.View里VISIBLE,INVISIBLE,GONE的区别？"></a>1.View里VISIBLE,INVISIBLE,GONE的区别？</h2><p> VISIBLE: 可见</p>
+<blockquote>
+<p>在xml中，如果view的visibility是VISIBLE，顺序为constructor-&gt;onFinishInflate-&gt;onAttachedToWindow-&gt;onVisibilityChanged-&gt;onMeasure-&gt;onSizeChanged-&gt;onLayout-&gt;onDraw</p>
+</blockquote>
+<p>INVISIBLE: 不可见，占位</p>
+<blockquote>
+<p>如果view的visibility是VISIBLE，在setContentView的时候，会例化该view，并进行测量及布局占位，顺序为constructor-&gt;onFinishInflate-&gt;onAttachedToWindow-&gt;onVisibilityChanged-&gt;onMeasure-&gt;onSizeChanged-&gt;onLayout-&gt;onDraw</p>
+</blockquote>
+<p> GONE: 不可见</p>
+<blockquote>
+<p>在xml中，如果view的visibility是GONE，在setContentView的时候，还是会实例化该view，顺序为constructor-&gt;onFinishInflate-&gt;onAttachedToWindow-&gt;onVisibilityChanged</p>
+</blockquote>
 
-INVISIBLE: 不可见，占位
-
-GONE: 不可见
-</code></pre><h2 id="2-View的绘制流程是什么？"><a href="#2-View的绘制流程是什么？" class="headerlink" title="2 View的绘制流程是什么？"></a>2 View的绘制流程是什么？</h2><pre><code>Constructors-&gt;onMeasure-&gt;onLayout-&gt;onDraw
-
-</code></pre>
       
 
       

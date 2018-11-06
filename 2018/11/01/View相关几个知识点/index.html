@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="//antikvo.online">
   <title>View 相关几个知识点 | Antikvo的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.View里VISIBLE,INVISIBLE,GONE的区别？VISIBLE: 可见  INVISIBLE: 不可见，占位  GONE: 不可见 2 View的绘制流程是什么？Constructors-&amp;gt;onMeasure-&amp;gt;onLayout-&amp;gt;onDraw ">
+  <meta name="description" content="1.View里VISIBLE,INVISIBLE,GONE的区别？ VISIBLE: 可见  在xml中，如果view的visibility是VISIBLE，顺序为constructor-&amp;gt;onFinishInflate-&amp;gt;onAttachedToWindow-&amp;gt;onVisibilityChanged-&amp;gt;onMeasure-&amp;gt;onSizeChanged-&amp;gt;onL">
 <meta name="keywords" content="开发者,程序猿,极客,编程,Android,SpringBoot,Vue">
 <meta property="og:type" content="article">
 <meta property="og:title" content="View 相关几个知识点">
 <meta property="og:url" content="//antikvo.online/2018/11/01/View相关几个知识点/index.html">
 <meta property="og:site_name" content="Antikvo的博客">
-<meta property="og:description" content="1.View里VISIBLE,INVISIBLE,GONE的区别？VISIBLE: 可见  INVISIBLE: 不可见，占位  GONE: 不可见 2 View的绘制流程是什么？Constructors-&amp;gt;onMeasure-&amp;gt;onLayout-&amp;gt;onDraw ">
+<meta property="og:description" content="1.View里VISIBLE,INVISIBLE,GONE的区别？ VISIBLE: 可见  在xml中，如果view的visibility是VISIBLE，顺序为constructor-&amp;gt;onFinishInflate-&amp;gt;onAttachedToWindow-&amp;gt;onVisibilityChanged-&amp;gt;onMeasure-&amp;gt;onSizeChanged-&amp;gt;onL">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-02T01:36:22.000Z">
+<meta property="og:updated_time" content="2018-11-06T06:04:57.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="View 相关几个知识点">
-<meta name="twitter:description" content="1.View里VISIBLE,INVISIBLE,GONE的区别？VISIBLE: 可见  INVISIBLE: 不可见，占位  GONE: 不可见 2 View的绘制流程是什么？Constructors-&amp;gt;onMeasure-&amp;gt;onLayout-&amp;gt;onDraw ">
+<meta name="twitter:description" content="1.View里VISIBLE,INVISIBLE,GONE的区别？ VISIBLE: 可见  在xml中，如果view的visibility是VISIBLE，顺序为constructor-&amp;gt;onFinishInflate-&amp;gt;onAttachedToWindow-&amp;gt;onVisibilityChanged-&amp;gt;onMeasure-&amp;gt;onSizeChanged-&amp;gt;onL">
   
     <link rel="alternative" href="/atom.xml" title="Antikvo的博客" type="application/atom+xml">
   
@@ -179,14 +179,19 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="1-View里VISIBLE-INVISIBLE-GONE的区别？"><a href="#1-View里VISIBLE-INVISIBLE-GONE的区别？" class="headerlink" title="1.View里VISIBLE,INVISIBLE,GONE的区别？"></a>1.View里VISIBLE,INVISIBLE,GONE的区别？</h2><pre><code>VISIBLE: 可见
+        <h2 id="1-View里VISIBLE-INVISIBLE-GONE的区别？"><a href="#1-View里VISIBLE-INVISIBLE-GONE的区别？" class="headerlink" title="1.View里VISIBLE,INVISIBLE,GONE的区别？"></a>1.View里VISIBLE,INVISIBLE,GONE的区别？</h2><p> VISIBLE: 可见</p>
+<blockquote>
+<p>在xml中，如果view的visibility是VISIBLE，顺序为constructor-&gt;onFinishInflate-&gt;onAttachedToWindow-&gt;onVisibilityChanged-&gt;onMeasure-&gt;onSizeChanged-&gt;onLayout-&gt;onDraw</p>
+</blockquote>
+<p>INVISIBLE: 不可见，占位</p>
+<blockquote>
+<p>如果view的visibility是VISIBLE，在setContentView的时候，会例化该view，并进行测量及布局占位，顺序为constructor-&gt;onFinishInflate-&gt;onAttachedToWindow-&gt;onVisibilityChanged-&gt;onMeasure-&gt;onSizeChanged-&gt;onLayout-&gt;onDraw</p>
+</blockquote>
+<p> GONE: 不可见</p>
+<blockquote>
+<p>在xml中，如果view的visibility是GONE，在setContentView的时候，还是会实例化该view，顺序为constructor-&gt;onFinishInflate-&gt;onAttachedToWindow-&gt;onVisibilityChanged</p>
+</blockquote>
 
-INVISIBLE: 不可见，占位
-
-GONE: 不可见
-</code></pre><h2 id="2-View的绘制流程是什么？"><a href="#2-View的绘制流程是什么？" class="headerlink" title="2 View的绘制流程是什么？"></a>2 View的绘制流程是什么？</h2><pre><code>Constructors-&gt;onMeasure-&gt;onLayout-&gt;onDraw
-
-</code></pre>
       
 
       
