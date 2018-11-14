@@ -9,14 +9,14 @@
   <title>View 相关几个知识点 | Antikvo的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="1.View里VISIBLE,INVISIBLE,GONE的区别？ VISIBLE: 可见  在xml中，如果view的visibility是VISIBLE，顺序为constructor-&amp;gt;onFinishInflate-&amp;gt;onAttachedToWindow-&amp;gt;onVisibilityChanged-&amp;gt;onMeasure-&amp;gt;onSizeChanged-&amp;gt;onL">
-<meta name="keywords" content="开发者,程序猿,极客,编程,Android,SpringBoot,Vue">
+<meta name="keywords" content="随笔,Android">
 <meta property="og:type" content="article">
 <meta property="og:title" content="View 相关几个知识点">
 <meta property="og:url" content="//antikvo.online/2018/11/01/View相关几个知识点/index.html">
 <meta property="og:site_name" content="Antikvo的博客">
 <meta property="og:description" content="1.View里VISIBLE,INVISIBLE,GONE的区别？ VISIBLE: 可见  在xml中，如果view的visibility是VISIBLE，顺序为constructor-&amp;gt;onFinishInflate-&amp;gt;onAttachedToWindow-&amp;gt;onVisibilityChanged-&amp;gt;onMeasure-&amp;gt;onSizeChanged-&amp;gt;onL">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-06T06:04:57.000Z">
+<meta property="og:updated_time" content="2018-11-14T06:14:57.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="View 相关几个知识点">
 <meta name="twitter:description" content="1.View里VISIBLE,INVISIBLE,GONE的区别？ VISIBLE: 可见  在xml中，如果view的visibility是VISIBLE，顺序为constructor-&amp;gt;onFinishInflate-&amp;gt;onAttachedToWindow-&amp;gt;onVisibilityChanged-&amp;gt;onMeasure-&amp;gt;onSizeChanged-&amp;gt;onL">
@@ -64,6 +64,10 @@
 	        
 				<li><a href="/tags/随笔/">随笔</a></li>
 	        
+				<li><a href="/tags/Android/">Android</a></li>
+	        
+				<li><a href="/tags/设计模式/">设计模式</a></li>
+	        
 			</ul>
 		</nav>
 		<nav class="header-smart-menu">
@@ -84,13 +88,7 @@
 		<nav class="header-nav">
 			<div class="social">
 				
-					<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
-		        
-					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
-		        
-					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-		        
-					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+					<a class="github" target="_blank" href="https://github.com/antikvo" title="github"><i class="icon-github"></i></a>
 		        
 			</div>
 		</nav>
@@ -122,29 +120,31 @@
 			
 				
 			
+				
+			
+				
+			
 			
 			
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
-			        
-						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
-			        
-						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-			        
-						<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+						<a class="github" target="_blank" href="https://github.com/antikvo" title="github"><i class="icon-github"></i></a>
 			        
 				</div>
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
+					<li style="width: 25%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/tags/随笔/">随笔</a></li>
+					<li style="width: 25%"><a href="/tags/随笔/">随笔</a></li>
+		        
+					<li style="width: 25%"><a href="/tags/Android/">Android</a></li>
+		        
+					<li style="width: 25%"><a href="/tags/设计模式/">设计模式</a></li>
 		        
 				</ul>
 			</nav>
@@ -183,6 +183,7 @@
 <blockquote>
 <p>在xml中，如果view的visibility是VISIBLE，顺序为constructor-&gt;onFinishInflate-&gt;onAttachedToWindow-&gt;onVisibilityChanged-&gt;onMeasure-&gt;onSizeChanged-&gt;onLayout-&gt;onDraw</p>
 </blockquote>
+<a id="more"></a>
 <p>INVISIBLE: 不可见，占位</p>
 <blockquote>
 <p>如果view的visibility是VISIBLE，在setContentView的时候，会例化该view，并进行测量及布局占位，顺序为constructor-&gt;onFinishInflate-&gt;onAttachedToWindow-&gt;onVisibilityChanged-&gt;onMeasure-&gt;onSizeChanged-&gt;onLayout-&gt;onDraw</p>
@@ -199,61 +200,36 @@
     <div class="article-info article-info-index">
       
       
-      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
+        		</li>
+      		
+		</ul>
+	</div>
 
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/学习记录//" class="article-tag-list-link color5">学习记录</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
-        </div>
-      </div>
-    </span>
-  </div>
-</div>
 
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://antikvo.online/2018/11/01/View相关几个知识点/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
@@ -263,11 +239,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/11/01/Activity的四种启动模式/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/11/01/Android 事件分发机制/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Activity 的四种启动模式
+          Android 事件分发机制
         
       </div>
     </a>
@@ -401,6 +377,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Android</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
               </li>
             
             <div class="clearfix"></div>
